@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Apsi_Color">#e6261f</color>
+    <color name="PPB_Color">#34bbe6</color>
+    <color name="Statpro_Color">#f7d038</color>
+    <color name="Pancasila_Color">#a3e048</color>
+    <color name="PPL1_Color">#4355db</color>
+    <color name="Proyek4_Color">#d23be7</color>
+
+</resources>

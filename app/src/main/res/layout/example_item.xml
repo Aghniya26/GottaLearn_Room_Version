@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:background="@color/cardview_shadow_end_color">
+
+        <ImageView
+            android:id="@+id/bookmark"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_bookmark_red" />
+
+        <ImageView
+            android:id="@+id/time"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_time" />
+
+        <TextView
+            android:id="@+id/text_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/bookmark"
+            android:text="RecyclerView"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text="2d 1h" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_below="@id/bookmark"
+            android:layout_marginStart="-1dp"
+            android:layout_marginLeft="-1dp"
+            android:background="@color/teal_200" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

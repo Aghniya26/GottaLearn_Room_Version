@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="selected_item">Selected item:</string>
+
+    <string-array name="mapel">
+        <item>APSI</item>
+        <item>PPB</item>
+        <item>PPL1</item>
+        <item>Proyek4</item>
+        <item>Pancasila</item>
+        <item>Statpro</item>
+    </string-array>
+</resources>

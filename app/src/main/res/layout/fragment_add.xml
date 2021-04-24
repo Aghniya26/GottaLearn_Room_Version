@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="6dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="Title...."
+        android:textSize="25dp"
+        android:singleLine="true"
+        android:id="@+id/a_title"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/a_title"
+        android:src="@drawable/add_description"
+        android:id="@+id/img_description"
+        android:alpha="0.3"
+        android:layout_alignBottom="@id/a_description"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/a_title"
+        android:layout_toRightOf="@id/img_description"
+        android:hint="Description.."
+        android:textSize="20dp"
+        android:id="@+id/a_description"
+        android:gravity="bottom"
+        />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/img_description"
+        android:src="@drawable/ic_book"
+        android:id="@+id/img_book"
+        android:alpha="0.1" />
+
+
+    <Spinner
+        android:id="@+id/a_mapel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/a_description"
+        android:layout_toRightOf="@id/img_book"
+        android:autofillHints="Subject..." />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_below="@id/a_mapel"
+        android:layout_toRightOf="@id/img_book"
+        android:alpha="0.3"/>
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/img_book"
+        android:src="@drawable/ic_time"
+        android:id="@+id/img_date"
+        android:alpha="0.3" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_below="@id/a_date"
+        android:layout_toRightOf="@id/img_date"
+        android:alpha="0.3"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/a_mapel"
+        android:hint="Due Date..."
+        android:textSize="20dp"
+        android:layout_toRightOf="@id/img_date"
+        android:gravity="center_vertical"
+        android:id="@+id/a_date"
+        android:onClick="onClick"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/img_date"
+        android:src="@drawable/ic_priority"
+        android:id="@+id/img_priority"
+        android:alpha="0.3" />
+
+    <Spinner
+        android:id="@+id/a_priority"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/a_date"
+        android:layout_toRightOf="@id/img_book"
+        android:autofillHints="Priority"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_below="@id/a_priority"
+        android:layout_toRightOf="@id/img_book"
+        android:alpha="0.3"/>
+
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="simpan"
+       android:id="@+id/addAssignmentButton"
+       android:layout_below="@id/a_priority"
+       android:layout_alignParentRight="true"/>
+    
+<!--    <Te xtView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_below="@id/a_description"-->
+<!--        android:layout_toRightOf="@id/img_book"-->
+<!--        android:id="@+id/styleMapel"-->
+<!--        android:textSize="15dp"-->
+<!--        android:hint="Subject..."-->
+<!--        android:layout_alignBottom="@id/a_mapel" />-->
+
+
+
+
+</RelativeLayout>
