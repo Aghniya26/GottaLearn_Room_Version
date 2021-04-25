@@ -9,7 +9,7 @@ import java.util.*
 data class Assignment (
 @PrimaryKey @ColumnInfo (name = "title") var title: String,
 @ColumnInfo(name = "description") var description: String,
-@ColumnInfo(name="date") var date: String,
+@ColumnInfo(name="date") val date: Date?,
 @ColumnInfo(name="priority") var priority: String,
 @ColumnInfo(name = "subject") var subject: String
 )

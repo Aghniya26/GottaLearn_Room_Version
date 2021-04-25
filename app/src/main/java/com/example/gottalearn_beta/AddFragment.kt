@@ -127,7 +127,7 @@ class AddFragment : Fragment() {
             val title=editTitle.text.toString()
             val description=editDescription.text.toString()
             val subject=spinnerMapel.selectedItem.toString()
-            val date=cal.time.toString()
+            val date=cal.time
             val priority=spinnerPriority.selectedItem.toString()
 
             val data=Assignment(title, description, date, priority, subject)

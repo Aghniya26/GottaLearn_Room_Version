@@ -11,6 +11,7 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import java.lang.Math.abs
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -32,7 +33,7 @@ class ExampleAdapter : ListAdapter<Assignment, ExampleAdapter.ExampleViewHolder>
 
         holder.imageView.setImageResource(signImage(currentItem.priority))
         holder.textView1.text=currentItem.title
-        holder.textView2.text=currentItem.date
+        holder.textView2.text=dueDate(currentItem.date)
         holder.line.setBackgroundResource(lineBackgorund(currentItem.subject))
 
 
@@ -79,12 +80,15 @@ class ExampleAdapter : ListAdapter<Assignment, ExampleAdapter.ExampleViewHolder>
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun dueDate(date1:LocalDate): String{
-        val currentDateTime = LocalDate.now()
-        val days = ChronoUnit.DAYS.between(date1,currentDateTime)
-        val hours=ChronoUnit.HOURS.between(date1,currentDateTime)-(days*24)
+    @Suppress("DEPRECATION")
+    private fun dueDate(date1:Date?): String{
+        val current = Date()
+        val difference: Long = abs(current.time - date1?.time!!)
+        val differenceDates = difference / (24 * 60 * 60 * 1000)
+        val dayDifference = differenceDates.toString()
 
-        return "$days"+"d"+" $hours"+"h"
+
+        return "$dayDifference"+"d"
 
     }
 

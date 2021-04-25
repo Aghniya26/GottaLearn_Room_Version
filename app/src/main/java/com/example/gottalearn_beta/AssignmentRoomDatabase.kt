@@ -5,12 +5,14 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.Room.databaseBuilder
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 @Database(entities = [Assignment::class], version = 1)
+@TypeConverters(Converters::class)
 abstract class AssignmentRoomDatabase: RoomDatabase() {
 
     abstract fun assignmentDao(): AssignmentDao
@@ -52,11 +54,19 @@ abstract class AssignmentRoomDatabase: RoomDatabase() {
                 super.onCreate(db)
                 // If you want to keep the data through app restarts,
                 // comment out the following line.
-//                INSTANCE?.let { database ->
-//                    scope.launch(Dispatchers.IO) {
-//                        populateDatabase(database.wordDao())
-//                    }
+                INSTANCE?.let { database ->
+                    scope.launch(Dispatchers.IO) {
+                        populateDatabase(database.assignmentDao())
+                    }
                 }
             }
+
+        suspend fun populateDatabase(assignmentDao: AssignmentDao) {
+            // Start the app with a clean database every time.
+            // Not needed if you only populate on creation.
+            assignmentDao.deleteAll()
+
+
         }
-}
+        }
+}}
